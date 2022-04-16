@@ -1,23 +1,17 @@
-from random import randint
-import os, time
+import os
+from src.main import Main
+import time
 
-os.system('cls')
+if os.name == 'nt':
+    os.system('cls')
+else:
+    os.system('clear')
 
-st = "Hello World"
-
-def Main(string:str):
-    newStr = ""
-    if len(newStr)==0:
-        newStr = string[0]
-    while True:
-        time.sleep(0.2)
-        ch = chr(randint(65,122))
-        if string.startswith(newStr+ch):
-            newStr+=ch
-            print("\r"+newStr,end="")
-            print()
-        else:
-            print("\r"+newStr+ch,end="")
-        if newStr==string:
-            break
-Main("Hello")
+inp = input("Type in the text you want to print: ")
+print("Trying to print \"%s\".. Hold up\n"%inp)
+start = time.time()
+try:
+    Main(inp)
+except KeyboardInterrupt:
+    print("Exiting :(")
+print("\n^-^ printed finally! (took %s seconds)"%round(time.time()-start,2))
