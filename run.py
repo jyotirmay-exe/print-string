@@ -5,8 +5,15 @@ os.system('cls')
 
 st = "Hello World"
 
-def Main(string):
+def Main(string:str):
+    newStr = ""
+    print(newStr)
+    if len(newStr)==0:
+        newStr = string[0]
     while True:
-        print(chr(randint(65,122)))
-        time.sleep(1)
-Main("")
+        ch = chr(randint(65,122))
+        if string.startswith(newStr+ch):
+            newStr+=ch
+            print(newStr)
+            time.sleep(0.2)
+Main("Hello")
