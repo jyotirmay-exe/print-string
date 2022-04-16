@@ -5,7 +5,7 @@ def Main(string:str):
     newStr = ""
     ind = 0
     while True:
-        time.sleep(0.1)
+        time.sleep(0.2)
         #generate a random printable ascii char
         ch = chr(randint(65,122))
         #test patience
