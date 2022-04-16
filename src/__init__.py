@@ -1,1 +1,1 @@
-#jst a file for python to recognize as a module
+#jst a file for python to recognize the folder as a module
