@@ -1,4 +1,4 @@
-import os
+import os, sys
 from src.main import Main
 import time
 
@@ -13,5 +13,6 @@ start = time.time()
 try:
     Main(inp)
 except KeyboardInterrupt:
-    print("Exiting :(")
+    print("\nExiting :(")
+    sys.exit()
 print("\n^-^ printed finally! (took %s seconds)"%round(time.time()-start,2))
